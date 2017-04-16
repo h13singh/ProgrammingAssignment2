@@ -4,7 +4,8 @@
 ## from the cache. Second function also checks whether a matrix is invertible or not. If matrix is invertible, inverse of the 
 ## matrix will be returned else message "Matrix can not be inverted" will be returned
 
-## makeCacheMatrix function get and set the matrix whose inverse is to be calculated and return all the values as a list
+## makeCacheMatrix function get and set the matrix whose inverse is to be calculated and return all the values as a list.
+## Variable "i" is defined as inverse of matrix that is to be calculated
 
 makeCacheMatrix <- function(x = matrix()) {
   i <- NULL
@@ -22,6 +23,8 @@ makeCacheMatrix <- function(x = matrix()) {
 
 ## cacheSolve function computes and return the inverse of the matrix returned by makeCacheMatrix. It also tells whether a 
 ## matrix can be convertible or not
+## To check whether a matrix is singular or not. Package (matrixcalc) is require to use function (is.singular.matrix)
+library(matrixcalc)
 
 cacheSolve <- function(x, ...) {
   i <- x$getinverse()
